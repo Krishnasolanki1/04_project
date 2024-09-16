@@ -3,7 +3,7 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <h1>Coder's Den</h1>
+      <h1>Coder 👩‍💻 krishna </h1>
     </div>
   );
 };

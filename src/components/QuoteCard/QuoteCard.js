@@ -1,18 +1,25 @@
+import Loder from "../Loder";
 import "./QuoteCard.css";
 
-const QuoteCard = () => {
+
+const QuoteCard = ({heandelClick , quote , loding}) => {
+const heandelLoding = ()=>{
+  if(!loding) return quote;
+  else return <Loder/>
+}
+
   return (
     <div className="quote__card--container">
       <h3 className="quote__card--heading">Quote</h3>
       <p className="quote__card--quote">
-        Victory is always possible for the person who refuses to stop fighting
+        {heandelLoding()}
       </p>
       <div className="quote__card--line">
         <p className="card__line card__line--1"></p>
         <p className="card__line--2"></p>
         <p className="card__line card__line--3"></p>
       </div>
-      <button className="quote__card--btn">get quote</button>
+      <button onClick={heandelClick} className="quote__card--btn">get quote</button>
     </div>
   );
 };
